@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/19 12:28:17 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/03/06 14:43:37 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/03/06 17:13:00 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	get_lenght(int number)
 {
-	int	string_lenght;
+	int	count_digits;
 
-	string_lenght = 0;
+	count_digits = 0;
 	if (number == 0)
 		return (1);
 	if (number < 0)
-		string_lenght++;
+		count_digits++;
 	while (number != 0)
 	{
 		number /= 10;
-		string_lenght++;
+		count_digits++;
 	}
-	return (string_lenght);
+	return (count_digits);
 }
 
 static char	*ft_itoa(int number)

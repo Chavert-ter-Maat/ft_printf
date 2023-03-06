@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/21 15:59:41 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/03/06 14:45:16 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/03/06 17:13:22 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 int	get_lenght_hex(unsigned int number)
 {
-	int	string_lenght;
+	int	count_digits;
 
-	string_lenght = 0;
+	count_digits = 0;
 	if (number == 0)
 		return (1);
 	while (number != 0)
 	{
 		number /= 16;
-		string_lenght++;
+		count_digits++;
 	}
-	return (string_lenght);
+	return (count_digits);
 }
 
 static char	*ft_itoah(unsigned int x, const char format)
