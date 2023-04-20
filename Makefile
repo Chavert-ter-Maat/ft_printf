@@ -20,14 +20,13 @@ RM 			= rm -f
 
 # SOURCES
 SRC 		= 	ft_printf.c \
-				ft_printstr.c \
-				ft_putc.c \
-				ft_putid.c \
-				ft_putp.c \
-				ft_putperc.c \
-				ft_puts.c \
-				ft_putu.c \
-				ft_putx.c \
+				put_c.c \
+				put_id.c \
+				put_p.c \
+				put_perc.c \
+				put_s.c \
+				put_u.c \
+				put_x.c \
 
 # OBJECTS
 OBJ 		= $(SRC:.c=.o)
@@ -65,10 +64,9 @@ clean: # Clean generated files and test cache
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "$(RED) ft_printf object files and folders are cleaned $(DEF_COLOR)"
+	@echo "$(RED)ft_printf object files and folders are cleaned $(DEF_COLOR)"
 
 re: # Cleaned and rebuilt
 	$(MAKE) fclean
 	$(MAKE) all
-	@echo "$(BLUE)Cleaned and rebuilt ft_printf $(DEF_COLOR)"
-
+	@echo "$(BLUE)cleaned and rebuilt ft_printf $(DEF_COLOR)"
