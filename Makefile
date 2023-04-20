@@ -6,7 +6,7 @@
 #    By: chaverttermaat <chaverttermaat@student.      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/17 11:27:38 by chavertterm   #+#    #+#                  #
-#    Updated: 2023/03/06 14:42:52 by cter-maa      ########   odam.nl          #
+#    Updated: 2023/04/20 14:48:40 by cter-maa      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CC 			= cc
 LIBFT		= libft
 CFLAGS		= -Wall -Wextra -Werror
 RM 			= rm -f
+AR			= ar -crs
 
 
 # SOURCES
@@ -46,19 +47,10 @@ WHITE 		= \033[0;97m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-##	make -C libft
-##	mv libft/libft.a ./libftprintf.a
-	ar -crs $(NAME) $(OBJ)
-	@echo "$(GREEN) ft_printf compiled $(DEF_COLOR)"
+	$(AR) $(NAME) $(OBJ)
+	@echo "$(GREEN)ft_printf compiled $(DEF_COLOR)"
 
-%.o : %.c 
-	$(CC) $(CFLAGS) -c $< -o $@ 
-
-comp: # Compile and clean
-	$(MAKE) all
-	$(MAKE) clean
-
-clean: # Clean generated files and test cache
+clean: 
 	$(RM) $(OBJ)
 	@echo "$(YELLOW)ft_printf object files cleaned $(DEF_COLOR)"
 
@@ -66,7 +58,7 @@ fclean: clean
 	$(RM) $(NAME)
 	@echo "$(RED)ft_printf object files and folders are cleaned $(DEF_COLOR)"
 
-re: # Cleaned and rebuilt
+re: 
 	$(MAKE) fclean
 	$(MAKE) all
 	@echo "$(BLUE)cleaned and rebuilt ft_printf $(DEF_COLOR)"
