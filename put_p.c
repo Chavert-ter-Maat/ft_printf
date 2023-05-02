@@ -18,7 +18,7 @@ static int	string_lenght(char *string)
 
 	i = 0;
 	if (!string)
-		return (-1);
+		return (FAILED);
 	while (string[i])
 	{
 		i++;
@@ -49,17 +49,17 @@ static char	*ft_itoah(uintptr_t x)
 	return (string);
 }
 
-int	put_p(uintptr_t pointer)
+int	put_p(uintptr_t p)
 {
 	char	*string;
 	int		lenght;
 
-	string = ft_itoah(pointer);
+	string = ft_itoah(p);
 	lenght = string_lenght(string);
 	if (!string)
-		return (-1);
-	if (print_string(string) == -1)
-		return (free(string), -1);
+		return (FAILED);
+	if (print_string(string) == FAILED)
+		return (free(string), FAILED);
 	free (string);
 	return (lenght);
 }

@@ -6,21 +6,23 @@
 /*   By: chaverttermaat <chaverttermaat@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/17 12:31:46 by chavertterm   #+#    #+#                 */
-/*   Updated: 2023/03/06 14:44:29 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:22:15 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// DEFINE
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-// INCLUDES
+// HEADERS
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
 # include <stdint.h>
+
+// DEFINES
+# define FAILED -1
 
 // FUNCTIONS
 int	ft_printf(const char *string, ...);

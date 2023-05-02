@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/19 15:44:10 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/03/06 14:43:54 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:26:44 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int	put_u(unsigned int u)
 
 	string = ft_itoa(u);
 	if (!string)
-		return (-1);
-	if (print_string(string) == -1)
-		return (free(string), -1);
+		return (FAILED);
+	if (print_string(string) == FAILED)
+		return (free(string), FAILED);
 	free (string);
 	return (get_lenght(u));
 }

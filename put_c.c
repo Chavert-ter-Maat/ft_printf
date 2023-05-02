@@ -6,13 +6,13 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/19 12:31:26 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/03/06 14:02:21 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:27:33 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	put_c(int character)
+int	put_c(int c)
 {
-	return (write(1, &character, 1));
+	return (write(1, &c, 1));
 }

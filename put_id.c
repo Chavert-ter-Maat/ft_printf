@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/19 12:28:17 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/03/06 17:13:00 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:27:25 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,15 @@ static char	*ft_itoa(int number)
 	return (string);
 }
 
-int	put_id(int number)
+int	put_id(int id)
 {
 	char	*string;
 
-	string = ft_itoa(number);
+	string = ft_itoa(id);
 	if (!string)
-		return (-1);
-	if (print_string(string) == -1)
-		return (free(string), -1);
+		return (FAILED);
+	if (print_string(string) == FAILED)
+		return (free(string), FAILED);
 	free (string);
-	return (get_lenght(number));
+	return (get_lenght(id));
 }

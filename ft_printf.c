@@ -6,7 +6,7 @@
 /*   By: chaverttermaat <chaverttermaat@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/17 13:58:06 by chavertterm   #+#    #+#                 */
-/*   Updated: 2023/03/06 14:43:08 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:28:39 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ int	ft_printf(const char *string, ...)
 		}
 		else
 			protect = put_c(string[index]);
-		if (protect == -1)
-			return (-1);
+		if (protect == FAILED)
+			return (FAILED);
 		count += protect;
 		index++;
 	}

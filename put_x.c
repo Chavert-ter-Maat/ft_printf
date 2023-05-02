@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/21 15:59:41 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/03/06 17:13:22 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:25:22 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ int	put_x(unsigned int x, const char format)
 	if (lenght == 0)
 		return (0);
 	if (!string)
-		return (-1);
-	if (print_string(string) == -1)
-		return (free(string), -1);
+		return (FAILED);
+	if (print_string(string) == FAILED)
+		return (free(string), FAILED);
 	free (string);
 	return (lenght);
 }
